@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'docker run --rm test/h:one'
             }
         }
         stage('Deploy') {
