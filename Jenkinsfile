@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'podman build -t test/h:one -f Containerfile .'
+                sh 'docker build -t test/h:one -f Containerfile .'
             }
         }
         stage('Test') {
