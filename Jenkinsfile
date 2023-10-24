@@ -1,18 +1,24 @@
 pipeline {
-    agent {
-        docker { image 'node:16-alpine' }
-    }
+    agent any
 
+    environment {
+        DOCKER_TOKEN=credentials('docker-hub-token')
+    }
     stages {
-        stage('Build') {
+        stage('Login') {
             steps {
-                sh 'node --version'
+                sh 'echo $DOCKER_TOKEN_PSW |docker login -u $DOCKER_TOKEN_USR --password-stdin'
             }
         }
-        stage('Deploy') {
+        stage('echo') {
             steps {
-                sh 'docker images'
+                echo 'Testing..'
             }
+        }
+    }
+    post {
+        always {
+            sh 'docker logout'
         }
     }
 }
