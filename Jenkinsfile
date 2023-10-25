@@ -3,7 +3,7 @@ pipeline {
   environment {
     GITHUB_TOKEN=credentials('gh-pat')
     IMAGE_NAME='mikebarkas/hugo-container'
-    IMAGE_VERSION='ext.0.119'
+    IMAGE_VERSION='ext-0.119'
   }
   stages {
     stage('Cleanup') {
@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build image') {
       steps {
-        sh 'docker build -t $IMAGE_NAME:$IMAGE_VERSION .'
+        sh 'docker build -t $IMAGE_NAME:$IMAGE_VERSION -f Containerfile .'
       }
     }
     stage('Login') {
