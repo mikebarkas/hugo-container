@@ -2,7 +2,7 @@
 
 The [Hugo](https://gohugo.io/) static site generator in a container.
 
-Available in Docker Hub: [mikebarkas/hugo]('https://hub.docker.com/repository/docker/mikebarkas/hugo/general')
+Available in Docker Hub: [mikebarkas/hugo](https://hub.docker.com/repository/docker/mikebarkas/hugo/general)
 
 | Hugo Version | Image Tag       | Arch  |
 |---------|-----------------|-------|
