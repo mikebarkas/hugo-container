@@ -21,6 +21,6 @@ Use Hugo for local development
 
 Note: mount your site files to `/opt` and your Hugo command requires `--bind 0.0.0.0`
 
-    docker run --rm -v .:/opt -p 1313:1313 mikebarkas/hugo:ext-0.120.4-arm64 server --bind 0.0.0.0
+    docker run --rm -v .:/opt -p 1313:1313 mikebarkas/hugo:0.120.4-arm64 server --bind 0.0.0.0
 
 ----
